@@ -8,12 +8,17 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 400px;
 }
 
 
 .igualar-imagen {
     width: 300px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
     height: 300px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
+}
+.solar-imagen {
+    width: 200px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
+    height: 200px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
 }
 /* Estilo para el fondo estrellado */
 .stars {
