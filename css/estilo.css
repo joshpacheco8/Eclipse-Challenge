@@ -10,9 +10,10 @@ body {
     text-align: center;
 }
 
-.custom-card img {
-    width: 300px; /* Establece el ancho deseado */
-    height: auto; /* Mantiene la relación de aspecto */
+
+.igualar-imagen {
+    width: 300px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
+    height: 300px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
 }
 /* Estilo para el fondo estrellado */
 .stars {
