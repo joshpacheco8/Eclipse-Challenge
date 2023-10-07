@@ -108,24 +108,23 @@ img{
     margin: 20; 
     color: rgb(224, 183, 95);
   }	
-
+  
 
 /*------carrucel--------*/
 
 .carrusel {
     display: flex;
     position: absolute;
-    top: 85%; /* Centra y en relación con el contenedor padre */
+    top: 90%; /* Centra y en relación con el contenedor padre */
     left: 50%; /* Centra x en relación con el contenedor padre */
     transform: translate(-50%, -50%); 
-    background-color: #333;
     padding: 20px 0;
     margin-bottom: 5%;
 }
 .carrusel .carrusel-contenido {
     display: flex;
     overflow: hidden;
-    width: 300px; 
+    width: 700px; 
 }
 
 .carrusel img {
@@ -186,3 +185,8 @@ img{
 }
 
 
+/**/
+#fases{
+    font-size: 400%;
+    text-align: center;
+}
