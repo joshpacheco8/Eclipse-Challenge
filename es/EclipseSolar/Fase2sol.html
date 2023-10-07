@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/leaflet.css" />
     <link rel="icon" href="../../img/icono.png" />
 
-    <title>Fase 6 Eclipse Lunar</title>
+    <title>Fase 2 Eclipse Solar</title>
     <style>
         body {
           margin: 0;
@@ -36,7 +36,7 @@
   
       <div class="contenedor">
         <div class="seccion1">
-          <a href="http://127.0.0.1:5501/es/EclipseLunar/Fase5luna.html" class="boton-imagen">
+          <a href="http://127.0.0.1:5501/es/EclipseSolar/Fase1sol.html" class="boton-imagen">
             <img src="../../img/izq1.png" alt="flecha" class="normal" />
             <img src="../../img/izq2.png" alt="flecha" class="hover" />
           </a>
@@ -123,32 +123,39 @@
                 camera.position.z += 1;
               }
             });
-
-            var moonGeometry = new THREE.SphereGeometry(8, 32, 32);
-            var moonTexture = new THREE.TextureLoader().load(
-              "../texturas/luna2.jpg"
+            
+            var sunGeometry = new THREE.SphereGeometry(8, 32, 32);
+            var sunTexture = new THREE.TextureLoader().load(
+                "../../texturas/sol2.jpg"
             );
 
-            var moonMaterial = new THREE.MeshPhongMaterial({
+            var sunMaterial = new THREE.MeshPhongMaterial({
+              map: sunTexture,
+              
+              emissiveIntensity: 0.3,
+            });
+            var sun = new THREE.Mesh(sunGeometry, sunMaterial);
+            sun.position.set(0, 3, -5);
+            scene1.add(sun);
+
+            var moonGeometry = new THREE.SphereGeometry(4, 32, 32);
+            var moonTexture = new THREE.TextureLoader().load(
+              "../../texturas/luna2.jpg"
+            );
+            var moonMaterial = new THREE.MeshBasicMaterial({
               map: moonTexture,
-              emissive: 0x000000,
-              emissiveIntensity: 10,
+              color: 0x0000000,
             });
             var moon = new THREE.Mesh(moonGeometry, moonMaterial);
-            moon.position.set(0, 2, 0);
+            moon.position.set(-2, 2, 5);
             scene1.add(moon);
   
-            var moonlight = new THREE.PointLight(0xF2F2F2, 2); // Color y intensidad
-            moonlight.position.set(90, 90, -40); // Dirección de la luz
-            scene1.add(moonlight)
+            // Crea la luz del Sol
+            var moonlight = new THREE.DirectionalLight(0xFFFF00, 3); // Color y intensidad
+            moonlight.position.set(0, 0, 5); // Dirección de la luz
+            scene1.add(moonlight);
 
-            var moonlight2 = new THREE.PointLight(0xE14524, 1); // Color y intensidad
-            moonlight2.position.set(-90, -90, 40); // Dirección de la luz
-            scene1.add(moonlight2)
 
-            var moonlight3 = new THREE.PointLight(0xF2F2F2, 0.3); // Color y intensidad
-            moonlight3.position.set(90, 90, 10); // Dirección de la luz
-            scene1.add(moonlight3)
 
             // Animación
             var animate = function () {
@@ -177,14 +184,14 @@
         </div>
   
         <div class="seccion3">
-          <a href="http://127.0.0.1:5501/es/EclipseLunar/Fase7luna.html" class="boton-imagen">
+          <a href="http://127.0.0.1:5501/es/EclipseSolar/Fase3sol.html" class="boton-imagen">
             <img src="../../img/der1.png" alt="flecha" class="normal" id="startButton"/>
             <img src="../../img/der2.png" alt="flecha" class="hover" />
           </a>
         </div>
       </div>
   
-      <script src="../../js/app.js"></script>
+      <script src="../js/app.js"></script>
 
 </body>
 </html>
