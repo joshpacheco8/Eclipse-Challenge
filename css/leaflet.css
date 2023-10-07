@@ -1,0 +1,188 @@
+/* barra de menu*/
+.menu {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #87CEEB;
+}
+
+/*-------divisiones---------*/
+.contendor{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+}
+.idioma{
+	position: absolute;
+	top: 1.7%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	color: #ffffff;
+}
+
+.seccion1{
+	width: 15%;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+
+}
+.seccion2{
+	width: 70%;
+	
+}
+.seccion3{
+	width: 15%;
+	position: absolute;
+	top: 50%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+	
+}
+
+
+/*-------botones-------*/
+img{
+	width: 45%;
+}
+.boton-imagen1 {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.boton-imagen .hover {
+    display: none;
+    
+}
+
+.boton-imagen:hover .normal {
+    display: none;
+    transform: scale(1.2);
+}
+
+.boton-imagen:hover .hover {
+    display: block;
+    transform: scale(1.2);
+}
+
+/*----------texto------------*/
+.encabezado {
+    width :70%;
+    position: absolute;
+    top: 15%; /* Centra y en relación con el contenedor padre */
+    left: 50%; /* Centra x en relación con el contenedor padre */
+    transform: translate(-50%, -50%); 
+}
+
+    
+.encabezado p {
+    margin: 20; 
+    color: rgb(224, 183, 95);
+  }	
+
+
+/*------carrucel--------*/
+
+.carrusel {
+    display: flex;
+    position: absolute;
+    top: 85%; /* Centra y en relación con el contenedor padre */
+    left: 50%; /* Centra x en relación con el contenedor padre */
+    transform: translate(-50%, -50%); 
+    background-color: #333;
+    padding: 20px 0;
+    margin-bottom: 5%;
+}
+.carrusel .carrusel-contenido {
+    display: flex;
+    overflow: hidden;
+    width: 300px; 
+}
+
+.carrusel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carrusel button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+.anterior, .siguiente {
+    margin-top: 10px;
+}
+
+.anterior {
+    margin-right: 20px
+}
+
+
+/*----chek*/
+
+
+.check {
+	position: relative;
+	width: 50px;
+}
+.check::before{
+	content: " ";
+	position: absolute;
+	width: 50px;
+	height: 25px;
+	background: #6a6a6a;
+	border-radius: 25px;
+}
+.check::after{
+	content: " ";
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: #fff;
+	border-radius: 25px;
+	transition: 0.25s;
+	border: 2px solid #8f8f8f;
+	box-sizing: border-box;
+}
+.check:checked::after{
+	left: 25px;
+	border: 2px solid #00a1ff;
+}
+.check:checked::before{
+	border: 0px solid #00a1ff;
+}
+
+
