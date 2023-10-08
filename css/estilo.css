@@ -40,3 +40,14 @@ body {
     height: 400px;
 }
 
+/* Estilos para el pie de página */
+.footer {
+    background-color: #e7e5e5; /* Color de fondo */
+    color: #1e0808; /* Color del texto */
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.footer p {
+    
+    bottom: auto;
+}
