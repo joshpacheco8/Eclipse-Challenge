@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eclipsee.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .justificado {
+            text-align: justify;
+        }
+    </style>
+    <title>Eclipse</title>
+</head>
+<body>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1>Eclipse Lunar</h1>
+                <h3>¿Qué es un eclipse solar?</h3>
+                <p class="justificado">Los eclipses solares ocurren cuando la Luna se coloca entre el Sol y la Tierra. En un eclipse solar, la Luna se interpone entre el Sol y la Tierra, bloqueando la luz solar que llega a la Tierra. Esto hace que el Sol parezca oscurecerse o "desaparecer".</p>
+            </div>
+        </div>
+        <div class="row justify-content-start">
+            <h2>Hay tres tipos de eclipses solares</h2>
+            <div class="col">
+                <p class="justificado">Total: 
+                 desde una franja (banda de totalidad) en la superficie de la Tierra, la Luna cubre totalmente el Sol. Fuera de la banda el eclipse es parcial. Se verá un eclipse total para los observadores situados en la Tierra que se encuentren dentro del cono de sombra lunar, cuyo diámetro máximo sobre la superficie de nuestro planeta no superará los 270 km. 
+                 La duración de la fase de totalidad puede durar varios minutos, entre 2 y 7,5, y alcanza algo más de las dos horas todo el fenómeno, en los eclipses anulares la máxima duración alcanza los 12 minutos y llega a más de cuatro horas en los parciales.</p>
+            </div>
+            <div class="col">
+                <p class="justificado">Anular: La Luna no es lo suficientemente grande como para bloquear completamente 
+                    la luz solar que llega a la Tierra. ocurre cuando la Luna se encuentra cerca del apogeo (el
+                    punto más alejado de la Tierra) y su diámetro angular es menor
+                    que el solar, de manera que en la fase máxima permanece visible
+                    un anillo del disco del Sol. Fuera de ella el eclipse es parcial.
+                    Los eclipses anulares son menos comunes que los eclipses solares totales, donde la Luna cubre por completo el disco solar. Para observar un eclipse anular de forma segura, siempre se deben tomar precauciones adecuadas para proteger los ojos.
+                    </p>                  
+            </div>
+            <div class="col">
+                <p class="justificado">Eclipse solar Parcial:
+                    Un eclipse parcial es un tipo de eclipse que ocurre cuando solo una parte de un objeto celeste, como la Luna o el Sol, está oculta por otro objeto celeste. En el caso de un eclipse parcial de Sol, una parte del disco solar queda oscurecida debido a que la Luna pasa entre la Tierra y el Sol, bloqueando solo una porción de la luz solar.
+                    Por otro lado, un eclipse parcial de Luna ocurre cuando solo una parte de la Luna entra en la sombra de la Tierra. Esto suele resultar en una oscurecimiento parcial de la Luna, en lugar de la Luna llena brillante que normalmente vemos.    
+                </p>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/solar/anular.PNG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/solar/parcial.PNG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/solar/total.PNG" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <br><br>
+        <button class="btn btn-primary" type="button">Salir</button>
+        <button id="translate-button" class="btn btn-secondary" onclick="translatePage()">Traducir</button>
+        <div id="google-translate" style="display: none;"></div>
+        <br><br>
+
+        </div>
+            
+    <script>
+        $(document).ready(function(){
+          $('.carousel').carousel();
+        });
+      </script>
+
+    <script>
+
+   
+        function loadGoogleTranslate() {
+          const script = document.createElement('script');
+          script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+          script.type = 'text/javascript';
+          document.head.appendChild(script);
+        }
+  
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  
+            autoDisplay: false,
+            multilanguagePage: true
+          }, 'google-translate');
+        }
+  
+        function translatePage() {
+          const translateButton = document.getElementById('translate-button');
+          const translateElement = document.getElementById('google-translate');
+  
+          if (translateButton.textContent === 'Traducir') {
+            // Cargar la biblioteca de Google Translate si aún no está cargada
+            if (!window.google || !window.google.translate) {
+              loadGoogleTranslate();
+            }
+  
+            translateElement.style.display = 'block';
+            translateButton.textContent = 'Cerrar Traducción';
+          } else {
+      
+            translateElement.style.display = 'none';
+            translateButton.textContent = 'Traducir';
+          }
+        }
+      </script>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script></body>
+</html>
