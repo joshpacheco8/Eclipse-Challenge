@@ -1,0 +1,17 @@
+body {
+    background: url('cielo-estrellado.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.custom-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo de las tarjetas con transparencia */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.2s; /* Efecto de transformación al hacer hover */
+  
+}
+
+.card-body{
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo de las tarjetas con transparencia */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.2s; /* Efecto de transformación al hacer hover */
+}

@@ -12,8 +12,8 @@ body {
 }
 
 .solar-imagen {
-    width: 300px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
-    height: 300px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
+    width: 280px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
+    height: 280px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
 }
 
 /* Estilo para el fondo estrellado */
