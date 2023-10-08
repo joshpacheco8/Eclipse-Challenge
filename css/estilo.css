@@ -45,9 +45,16 @@ body {
     background-color: #e7e5e5; /* Color de fondo */
     color: #1e0808; /* Color del texto */
     padding: 20px 0; /* Espaciado interno */
+    position: absolute;
+    width: 100%;
+	top: 93%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .footer p {
     
     bottom: auto;
 }
+
+

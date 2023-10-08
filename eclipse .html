@@ -6,18 +6,23 @@
     <link rel="stylesheet" href="eclipsee.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
+    <link rel="stylesheet" href="css/solarLunar.css">
+   <style>
         .justificado {
             text-align: justify;
         }
+        .container {
+        background-color: white; /* Establece el fondo blanco */
+        padding: 20px; /* Añade un relleno para separar el contenido del borde del contenedor */
+    }
     </style>
     <title>Eclipse</title>
 </head>
 <body>
-    <div class="container text-center">
+    <div class="container text-center ">
         <div class="row justify-content-center">
             <div class="col">
-                <h1>Eclipse Lunar</h1>
+                <h1>Eclipse Solar</h1>
                 <h3>¿Qué es un eclipse solar?</h3>
                 <p class="justificado">Los eclipses solares ocurren cuando la Luna se coloca entre el Sol y la Tierra. En un eclipse solar, la Luna se interpone entre el Sol y la Tierra, bloqueando la luz solar que llega a la Tierra. Esto hace que el Sol parezca oscurecerse o "desaparecer".</p>
             </div>
@@ -72,7 +77,7 @@
               </div>
         </div>
         <br><br>
-        <button class="btn btn-primary" type="button">Salir</button>
+        <a href="/es/EclipseSolar/Fase1sol.html" class="btn btn-outline-success" type="submit">Back</a>
         <button id="translate-button" class="btn btn-secondary" onclick="translatePage()">Traducir</button>
         <div id="google-translate" style="display: none;"></div>
         <br><br>
