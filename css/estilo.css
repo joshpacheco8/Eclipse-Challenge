@@ -11,6 +11,7 @@ body {
     height: 400px;
 }
 
+
 .igualar-imagen {
     width: 300px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
     height: 300px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
@@ -22,7 +23,7 @@ body {
 /* Estilo para el fondo estrellado */
 .stars {
     position: fixed;
-    
+
     top: 0;
     left: 0;
     width: 100%;
