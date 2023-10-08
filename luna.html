@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lunarr.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .justificado {
+            text-align: justify;
+        }
+    </style>
+    <title>Lunar</title>
+</head>
+<body>
+    <div id="ingles" class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1>Eclipse Lunar</h1>
+                <h3>¿Qué es un eclipse lunar?</h3>
+                <p class="justificado">En un eclipse lunar, la Tierra se interpone entre el Sol y la Luna, bloqueando la luz solar que llega a la Luna. Esto hace que la Luna parezca oscurecerse o "desaparecer".</p>
+            </div>
+        </div>
+        <div class="row justify-content-start">
+            <h2>Hay dos tipos de eclipses lunares</h2>
+            <div class="col">
+                <p class="justificado">Total: 
+                    parcial es un fenómeno astronómico en el cual una parte de la Luna se encuentra en la sombra de la Tierra, pero no completamente. Esto ocurre cuando la Luna pasa a través de la penumbra de la Tierra, la parte más tenue de su sombra, en lugar de la umbra, que es la sombra más oscura y central. Durante un eclipse lunar parcial, solo una fracción de la Luna se oscurece, y la mayor parte de su disco lunar aún es visible.
+                </p>
+            </div>
+            <div class="col">
+                <p class="justificado">Parcial: 
+                    a Luna pasa completamente a través de la umbra de la Tierra, lo que resulta en que la Luna se oscurezca por completo. Esto ocurre cuando la Tierra se interpone entre el Sol y la Luna durante la fase de Luna llena. Durante un eclipse lunar total, la Luna puede adquirir un color rojizo o cobrizo debido a la dispersión de la luz solar a través de la atmósfera de la Tierra. Este efecto se llama "luna de sangre".
+            </div>
+        </div>
+        <div>
+            <h2>Tener en cuenta</h2>
+            <p class="justificado">Los eclipses lunares son relativamente comunes, ocurriendo aproximadamente cada 2,5 años. Los eclipses solares, por otro lado, son más raros, ocurriendo aproximadamente cada 18 meses. Los eclipses solares son peligrosos de observar a simple vista, ya que pueden causar daños oculares permanentes. Es importante usar gafas de eclipse o un visor solar especial para observar un eclipse solar. Los eclipses lunares son seguros de observar a simple vista.</p>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/parcial.PNG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/total.PNG" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <br><br>
+    <button class="btn btn-primary" type="button">Salir</button>
+    <button id="translate-button" class="btn btn-secondary" onclick="translatePage()">Traducir</button>
+    <div id="google-translate" style="display: none;"></div>
+    <br><br>  
+    </div>  
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $('.carousel').carousel();
+        });
+      </script>
+
+    <script>
+   
+      function loadGoogleTranslate() {
+        const script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.type = 'text/javascript';
+        document.head.appendChild(script);
+      }
+
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',  
+          autoDisplay: false,
+          multilanguagePage: true
+        }, 'google-translate');
+      }
+
+      function translatePage() {
+        const translateButton = document.getElementById('translate-button');
+        const translateElement = document.getElementById('google-translate');
+
+        if (translateButton.textContent === 'Traducir') {
+          // Cargar la biblioteca de Google Translate si aún no está cargada
+          if (!window.google || !window.google.translate) {
+            loadGoogleTranslate();
+          }
+
+          translateElement.style.display = 'block';
+          translateButton.textContent = 'Cerrar Traducción';
+        } else {
+    
+          translateElement.style.display = 'none';
+          translateButton.textContent = 'Traducir';
+        }
+      }
+    </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script></body>
+</html>
+</body>
+</html>
