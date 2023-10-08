@@ -4,7 +4,12 @@ body {
     background-size: cover;
 }
 
-
+ /* Establece un fondo de color */
+ .card-body{
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo de las tarjetas con transparencia */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.2s; /* Efecto de transformación al hacer hover */
+}
 .igualar-imagen {
     width: 300px; /* Elige el ancho deseado, como 100% para que se ajusten al contenedor */
     height: 300px; /* Esto permite que la altura se ajuste automáticamente según el ancho */
