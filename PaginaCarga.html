@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="/css/carga.css">
+  </head>
+  <body>
+    <img src="img/nave-espacial.png" alt="Nave Espacial" class="nave" />
+    <div class="barra-carga">
+      <div class="progreso"></div>
+    </div>
+    <script>
+      var progreso = 0;
+      var barraCarga = document.querySelector(".progreso");
+      var intervalo = setInterval(function () {
+        if (progreso < 100) {
+          progreso += 1;
+          barraCarga.style.width = progreso + "%";
+        } else {
+          clearInterval(intervalo);
+          redirigirAEscena();
+        }
+      }, 90);
+      function redirigirAEscena() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
