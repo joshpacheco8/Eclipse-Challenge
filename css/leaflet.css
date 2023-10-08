@@ -4,6 +4,10 @@
     color: #fff;
     padding: 10px;
 }
+a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color heredado */
+}
 
 .menu ul {
     list-style: none;
@@ -35,10 +39,10 @@
 }
 .idioma{
 	position: absolute;
-	top: 1.7%;
-	left: 80%;
+	top: 4.6%;
+	left: 90%;
 	transform: translate(-50%, -50%);
-	color: #ffffff;
+	color: #000000;
 }
 
 .seccion1{
@@ -98,7 +102,7 @@ img{
 .encabezado {
     width :70%;
     position: absolute;
-    top: 15%; /* Centra y en relación con el contenedor padre */
+    top: 20%; /* Centra y en relación con el contenedor padre */
     left: 50%; /* Centra x en relación con el contenedor padre */
     transform: translate(-50%, -50%); 
 }

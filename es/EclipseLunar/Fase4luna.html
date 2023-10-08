@@ -20,33 +20,36 @@
       </style>
 </head>
 <body>
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid">
-        <div class="navbar-brand d-flex align-items-center">
-            <img src="../../img/cohete1.png" alt="Logo" width="50" height="70" class="d-inline-block align-text-top me-2">
-            <h3 class="mb-0">SPACE CHALLENGE</h3>
-        </div>
+  
 
-        <form class="d-flex" role="search">
-            
-            <a href="sectionmain.html" class="btn btn-outline-success" type="submit">PREGUNTAS FRECUENTES</a>
-        </form>
-    </div>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+      <div class="navbar-brand d-flex align-items-center">
+          <img src="../../img/cohete1.png" alt="Logo" width="50" height="70" class="d-inline-block align-text-top me-2">
+          <a href="../../index.html"><h3 class="mb-0">SPACE CHALLENGE</h3></a>
+      </div>
+      <style>
+         a {
+          text-decoration: none; /* Elimina el subrayado */
+          color: inherit; /* Usa el color heredado */
+      }
+      
+      </style>
+
+      <form class="d-flex" role="search">
+          
+        
+      </form>
+  </div>
 </nav>
-  <div class="menu">
-    <ul>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+  
 
     <div class="idioma">
         English
         <input type="checkbox" class="check">
         Spanish
     </div>
-</div>
+
 <script>
   var check=document.querySelector('.check');
   check.addEventListener('click',idioma);
@@ -155,7 +158,7 @@
               emissiveIntensity: 10,
             });
             var moon = new THREE.Mesh(moonGeometry, moonMaterial);
-            moon.position.set(0, 0, 0);
+            moon.position.set(0, 1, 0);
             scene1.add(moon);
   
             // Crea la luz del Sol
@@ -188,7 +191,7 @@
   
   <div class="carrusel">
     <div class="carrusel-contenido">
-        <img src="./../img/lunar/Moon Phases.png" alt="Imagen 1">
+        <img src="../../img/lunar/Moon Phases.png" alt="Imagen 1">
     </div>
 </div>
   

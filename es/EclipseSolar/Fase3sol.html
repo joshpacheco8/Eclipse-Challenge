@@ -24,29 +24,28 @@
     <div class="container-fluid">
         <div class="navbar-brand d-flex align-items-center">
             <img src="../../img/cohete1.png" alt="Logo" width="50" height="70" class="d-inline-block align-text-top me-2">
-            <h3 class="mb-0">SPACE CHALLENGE</h3>
+            <a href="../../index.html"><h3 class="mb-0">SPACE CHALLENGE</h3></a>
         </div>
-
+        <style>
+           a {
+            text-decoration: none; /* Elimina el subrayado */
+            color: inherit; /* Usa el color heredado */
+        }
+        
+        </style>
+  
         <form class="d-flex" role="search">
-            
-            <a href="sectionmain.html" class="btn btn-outline-success" type="submit">PREGUNTAS FRECUENTES</a>
+              
         </form>
     </div>
-</nav>
-  <div class="menu">
-    <ul>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+  </nav>
 
     <div class="idioma">
         English
         <input type="checkbox" class="check">
         Spanish
     </div>
-</div>
+
 <script>
   var check=document.querySelector('.check');
   check.addEventListener('click',idioma);
