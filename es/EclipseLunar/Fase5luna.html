@@ -27,26 +27,16 @@
             <h3 class="mb-0">SPACE CHALLENGE</h3>
         </div>
 
-        <form class="d-flex" role="search">
-            
-            <a href="sectionmain.html" class="btn btn-outline-success" type="submit">PREGUNTAS FRECUENTES</a>
-        </form>
+       
     </div>
 </nav>
-  <div class="menu">
-    <ul>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+  
 
     <div class="idioma">
         English
         <input type="checkbox" class="check">
         Spanish
     </div>
-</div>
 <script>
   var check=document.querySelector('.check');
   check.addEventListener('click',idioma);
@@ -68,7 +58,7 @@
             <img src="../../img/izq2.png" alt="flecha" class="hover" />
           </a>
         </div>
-        <div class="seccion2">
+        <div class="seccion2" id="fases">
           <div class="encabezado">
             <p>
               Moon phases
@@ -151,7 +141,7 @@
               emissiveIntensity: 10,
             });
             var moon = new THREE.Mesh(moonGeometry, moonMaterial);
-            moon.position.set(0, 1, 0);
+            moon.position.set(0, 2, 0);
             scene1.add(moon);
   
             var moonlight = new THREE.PointLight(0xF2F2F2, 2); // Color y intensidad
